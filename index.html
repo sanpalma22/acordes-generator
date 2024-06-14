@@ -11,9 +11,18 @@
         <h1>Generador de Acordes Aleatorios</h1>
         <div class="form">
             <label for="inputCant">Ingrese cantidad de acordes generados:</label>
-            <input type="number" id="inputCant" min="1" step="1" value="5">
+            <input type="number" id="inputCant">
             <label for="inputIntervalo">Ingrese intervalo entre acordes (segundos):</label>
-            <input type="number" id="inputIntervalo" min="1" step="1" value="3">
+            <input type="number" id="inputIntervalo">
+            <label for="selectTipo">Seleccione el tipo de acorde</label>
+            <select id="selectTipo">
+                <option value="0" selected>Todos</option>
+                <option value="1">Acordes mayores</option>
+                <option value="2">Acordes maj7</option>
+                <option value="3">Acordes 7</option>
+                <option value="4">Acordes m7</option>
+                <option value="5">Acordes m7b5</option>
+            </select>
             <button id="enter">Comenzar</button>
         </div>
         <div id="display" class="display"></div>

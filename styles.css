@@ -27,7 +27,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-.form input {
+.form input, .form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -52,10 +52,16 @@ h1 {
 }
 
 .display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 50px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    text-align: center; /* Centra el texto */
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    
 }
+
+
