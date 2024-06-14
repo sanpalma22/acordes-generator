@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    width: 90%;
     margin: 50px auto;
     background-color: #fff;
     border-radius: 10px;
@@ -33,6 +33,7 @@ h1 {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho del input */
 }
 
 .form button {
@@ -51,14 +52,10 @@ h1 {
 }
 
 .display {
-    display: flex;
     min-height: 50px;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-
+    text-align: center; /* Centra el texto */
+    font-size: 20px;
 }
