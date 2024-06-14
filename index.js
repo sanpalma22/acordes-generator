@@ -61,6 +61,7 @@ const acordes = [
   { nombre: "Bm7b5", tipo: 5 },
 ];
 
+const inputsContainer = document.querySelector('.form');
 const displayNotas = document.getElementById("display");
 const inputAcordes = document.getElementById("inputCant");
 const inputIntervalo = document.getElementById("inputIntervalo");
@@ -69,7 +70,13 @@ const boton = document.getElementById("enter");
 
 boton.onclick = () =>{
   const seleccionAcordes = select.value == 0 ? acordes : filtrarAcordes(select.value);
-  generarNotas(inputAcordes.value, inputIntervalo.value * 1000, seleccionAcordes);
+  inputsContainer.style.display = 'none';
+
+  setTimeout(() => {
+    generarNotas(inputAcordes.value, inputIntervalo.value * 1000, seleccionAcordes);
+  }, 1500);
+  
+  
 }
 
 function generarNotas(cantAcordes, intervalo, arrayAcordes) {
@@ -82,7 +89,10 @@ function generarNotas(cantAcordes, intervalo, arrayAcordes) {
 
   setTimeout(() => {
     displayNotas.innerHTML = "";
+    inputsContainer.style.display = 'block';
   }, cantAcordes * intervalo);
+
+  
 }
 
 function filtrarAcordes(i){
